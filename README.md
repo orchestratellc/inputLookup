@@ -1,7 +1,7 @@
 # inputLookup 
 ## Salesforce Lightning Component
 
-For dynamic sObject lookup in custom Salesforce1 and Lightning mobile applications. Uses native Lightning Component and Apex functionality with no third-party dependencies.
+The Lightning Component Lookup Field. For dynamic sObject record lookup in custom Salesforce1 and Lightning mobile applications. Uses native Lightning Component and Apex functionality with no third-party dependencies. 
 
 ### Usage: 
 
