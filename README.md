@@ -1,12 +1,12 @@
 # inputLookup 
 ## Salesforce Lightning Component
 
-For dynamic sObject lookup in custom Salesforce1 and Lightning mobile applications. 
+For dynamic sObject lookup in custom Salesforce1 and Lightning mobile applications. Uses native Lightning Component and Apex functionality with no third-party dependencies.
 
 ### Usage: 
 
-- Required: Object Label (sObjLabel) and Object Name (sObjName)
-- Optional: Id of the record (value)
+- Required attributes: Object Label (sObjLabel) and Object Name (sObjName)
+- Optional attributes: Id of the record (value)
 
 #### Standard Objects
 ```
