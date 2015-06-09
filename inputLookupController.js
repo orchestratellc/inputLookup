@@ -1,8 +1,6 @@
 ({
     doInit: function(cmp,event,helper) {
         // get name for passed-in lookup id (optional attribute) if we don't have a name
-        console.log('initial input value');
-        console.log(cmp.get('v.value'));
         var cId = cmp.get('v.value');
         if (cId) {
             helper.searchById(cmp);
@@ -11,8 +9,7 @@
     handleIdInput: function(cmp) {
         var cId = cmp.get('v.value');
         var cName = cmp.get('v.searchTerm');
-        //console.log('cId '+cId);
-        //console.log('cName '+cName);        
+      
         if (cId && !cName) {
             helper.searchById(cmp);
         }        
@@ -22,6 +19,6 @@
 			helper.searchByName(cmp);
 	},
     handleResultSelect: function(cmp,event,helper) {
-		helper.setResultsInfo(cmp,event);         
+	helper.setResultsInfo(cmp,event);         
     }
 })
