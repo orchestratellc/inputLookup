@@ -1,0 +1,7 @@
+.THIS.searchResults { 
+    position: absolute;
+    padding-right:35px; 
+    background: #fff;
+    z-index:1000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
