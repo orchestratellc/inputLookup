@@ -1,0 +1,2 @@
+# inputLookup
+inputLookup Lightning Component
