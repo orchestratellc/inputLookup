@@ -5,8 +5,8 @@ For dynamic sObject lookup in custom Salesforce1 and Lightning mobile applicatio
 
 ### Usage: 
 
-Required: Object Label (sObjLabel) and Object Name (sObjName)
-Optional: Id of the record (value)
+- Required: Object Label (sObjLabel) and Object Name (sObjName)
+- Optional: Id of the record (value)
 
 #### Standard Objects
 ```
