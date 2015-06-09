@@ -39,25 +39,25 @@
 	        action.setCallback(this, function(response){          
 	            var state = response.getState();
 	
-				// if we have a result, set the component attribute values           
-	            if (state === "SUCCESS" && response.getReturnValue() 
-	                	&& response.getReturnValue()[0].id!=='error') {
-	                var sObj = response.getReturnValue()[0];
-	                cmp.set('v.searchTerm',sObj.name);             
-	            }
+			// if we have a result, set the component attribute values           
+			if (state === "SUCCESS" && response.getReturnValue() 
+				&& response.getReturnValue()[0].id!=='error') {
+				var sObj = response.getReturnValue()[0];
+				cmp.set('v.searchTerm',sObj.name);             
+			}
 	        });
 	        
 	        $A.enqueueAction(action);
 	},    
-	    setResultsInfo: function(cmp,event) {
-	        // set search term and id, reset results 
-	        var el = event.getSource().getElements()[0];
-	        
-	        // clear results 
-    		cmp.set('v.hasResults',false);
-	            
-	        // add parameters to name and id fields
-    		cmp.set('v.searchTerm',el.text);    
-    		cmp.set('v.value',el.title);          
-	    }
+	setResultsInfo: function(cmp,event) {
+		// set search term and id, reset results 
+		var el = event.getSource().getElements()[0];
+		
+		// clear results 
+		cmp.set('v.hasResults',false);
+		
+		// add parameters to name and id fields
+		cmp.set('v.searchTerm',el.text);    
+		cmp.set('v.value',el.title);          
+	}
 })
