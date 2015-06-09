@@ -1,0 +1,35 @@
+<aura:component controller="InputLookupCtrl">
+    <!-- Public Attributes - Required -->
+    <aura:attribute name="sObjLabel" type="String" required="true" description="Label for Lookup object"/>
+    <aura:attribute name="sObjName" type="String" required="true" description="API Name of Lookup object"/>  
+    
+    <!-- Public Attributes - Optional -->
+    <aura:attribute name="value" type="String" description="Id from search term result" />
+    
+    <!-- Private Attributes -->
+    <aura:attribute name="searchTerm" type="String" access="private" description="Search term for lookup" default=""/>     
+    <aura:attribute name="searchResults" type="Object[]" access="private" description="Search results"/>     
+    <aura:attribute name="hasResults" type="Boolean" access="private" default="false" />      
+	
+    <!-- Event Handlers -->    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+
+    <!-- Search Input -->    
+    <ui:inputText aura:id="searchField" class="forceInputLookupTrigger" label="{!v.sObjLabel}" 
+                  value="{!v.searchTerm}" placeholder="{!'Select '+v.sObjLabel}" 
+                  keyup="{!c.handleSearchChange}" updateOn="keyup"/>
+
+    <!-- Search Results -->
+    <div class="searchResults">
+        <aura:renderIf isTrue="{!v.hasResults}">
+            <ul class="searchResults">
+                <aura:iteration items="{!v.searchResults}" var="res">
+                    <li class="resultItem">
+                        <ui:outputURL title="{!res.id}" value="" label="{!res.name}" click="{!c.handleResultSelect}"/>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </aura:renderIf>    
+    </div>
+
+</aura:component>
