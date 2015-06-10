@@ -16,7 +16,7 @@
     },
     handleSearchChange : function(cmp, event, helper) {
         if (cmp.get('v.searchTerm') && cmp.get('v.searchTerm').length>1)
-			helper.searchByName(cmp);
+	    helper.searchByName(cmp);
 	},
     handleResultSelect: function(cmp,event,helper) {
 	helper.setResultsInfo(cmp,event);         
